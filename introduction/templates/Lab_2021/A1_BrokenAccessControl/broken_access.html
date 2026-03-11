@@ -4,13 +4,20 @@
 <title>Broken Access Control</title>
 {% endblock %}
 <div class="content">
-    <h3>Broken Access Control</h3>
+
+  <!-- CHANGE 1: wrapped h3 in flex row with lab-controls -->
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+    <h3 style="margin:0;">Broken Access Control</h3>
+    <div id="lab-controls" data-lab="broken_access_lab"></div>
+  </div>
+  <!---->
+
     <div class="box">
 
         <h4>What is Broken Access Control</h4>
         <p class="bp"> Access control, sometimes called authorization, is how a web application grants access to content
             and functions to some users and not others. These checks are performed after authentication, and govern what
-            ‘authorized’ users are allowed to do. A web application’s access control model is closely tied to the
+            'authorized' users are allowed to do. A web application's access control model is closely tied to the
             content and functions that the site provides. In addition, the users may fall into a number of groups or
             roles with different abilities or privileges.
 
@@ -48,20 +55,17 @@
                 <li>When you notice the cookie value when logged in as <code>jack</code> it is set to 0</li>
                 <li>Use BurpSuite to intercept the request change the value of the admin cookie from 0 to 1</li>
                 <li>This should log you in as a admin user and display the secret key</li>
-
             </ul>
             </p>
             </p>
-
             <br>
-            <div align="right"> <button class="btn btn-info" type="button" 
-                onclick="window.location.href='/broken_access_lab_1'">Access Lab 1</button></div>
-            
+            <!-- CHANGE 2: button → lab-access-btn anchor -->
+            <div align="right">
+              <a class="btn btn-info lab-access-btn" data-path="/lab1" href="#">Access Lab 1</a>
+            </div>
             <br>
         </div>
     </div>
-
-
 
     <div class="box">
         <button class="coll btn btn-info">Lab 2 Details</button>
@@ -74,30 +78,25 @@
                 <br>The credentials for the user Jack is <b><code>jack:jacktheripper</code></b>.
                 <br>Use the above info to log in.<br>
                 The main aim of this lab is to login with admin privileges to get the secret key.
-            
-
-
+                
                 <br><br><b>Exploiting the Broken Access</b>
             <ul>
-
             <p class="bp">
             <ul>
                 <li>Log in Using the credentials provided above</li>
                 <li>Search for information lying around in the source files</li>
                 <li>You'll find out that user agent needs to be <code>pygoat_admin</code></li>
                 <li>Use BurpSuite to intercept the request and change headers <code>User-Agent</code> to value pygoat_admin</li>
-
             </ul>
             </p>
-                
             </ul>
             </p>
             </p>
-
             <br>
-            <div align="right"> <button class="btn btn-info" type="button" 
-                onclick="window.location.href='/broken_access_lab_2'">Access Lab 2</button></div>
-            
+            <!-- CHANGE 2: button → lab-access-btn anchor -->
+            <div align="right">
+              <a class="btn btn-info lab-access-btn" data-path="/lab2" href="#">Access Lab 2</a>
+            </div>
             <br>
         </div>
     </div>
@@ -115,11 +114,11 @@
 
                 this is regular user credential<br>
                 can u get access to admin page contents using regular user credentials or without credentials ?<br>
-
             </p>
-            <div align="right"> <button class="btn btn-info" type="button" 
-                onclick="window.location.href='/broken_access_lab_3'">Access Lab 3</button></div>
-            
+            <!-- CHANGE 2: button → lab-access-btn anchor -->
+            <div align="right">
+              <a class="btn btn-info lab-access-btn" data-path="/lab3" href="#">Access Lab 3</a>
+            </div>
             <br>
         </div>
     </div>
@@ -136,12 +135,9 @@
             <li>Log access control failures, alert admins when appropriate (e.g., repeated failures)</li>
             <li>Rate limit API and controller access to minimize the harm from automated attack tooling</li>
             <li>Stateful session identifiers should be invalidated on the server after logout. Stateless JWT tokens should rather be short-lived so that the window of opportunity for an attacker is minimized. For longer lived JWTs it's highy recommended to follow the OAuth standards to revoke access.</li>
-
         </ul>
         </p>
     </div>
 </div>
-
-
 
 {% endblock %}
