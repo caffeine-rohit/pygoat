@@ -15,3 +15,6 @@ bin
 # vscode
 .vscode/
 
+traefik
+traefik_v2.9.10_linux_amd64.tar.gz
+staticfiles/

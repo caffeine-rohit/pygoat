@@ -129,111 +129,101 @@
                 </ul>
               </li>
             </ul>
-            <a
-              href="#OWASP10_2021"
-              data-toggle="collapse"
-              aria-expanded="false"
-              class="dropdown-toggle"
-              id="owasp10_2021"
-              style="padding: 13% 10% 0 0"
-            >
+            <a href="#OWASP10_2021" data-toggle="collapse" aria-expanded="false"
+              class="dropdown-toggle" id="owasp10_2021" style="padding: 13% 10% 0 0">
               <i class="fas fa-flag"></i>
               OWASP TOP 10 2021
             </a>
             <ul class="collapse list-unstyled" id="OWASP10_2021">
               <li>
-                <button onclick="launchLab('broken_access_lab')" class="sidebar-list-items lab-button" data-lab="broken_access_lab">
+                <a href="/broken_access_control" class="sidebar-list-items lab-button" data-lab="broken_access_lab">
                   <i class="fas fa-bug"></i>
                   A1: Broken Access Control
                   <span class="lab-status-indicator not-running" aria-hidden="true"></span>
-                </button>
+                </a>
               </li>
               <li>
-                <button onclick="launchLab('crypto_failure_lab')" class="sidebar-list-items lab-button" data-lab="crypto_failure_lab">
+                <a href="/cryptographic_failure" class="sidebar-list-items lab-button" data-lab="crypto_failure_lab">
                   <i class="fas fa-bug"></i>
                   A2: Cryptographic Failures
                   <span class="lab-status-indicator not-running" aria-hidden="true"></span>
-                </button>
+                </a>
               </li>
               <li>
-                <a
-                  href="#sqlSubmenu2"
-                  data-toggle="collapse"
-                  aria-expanded="false"
-                  class="dropdown-toggle sidebar-list-items"
-                >
+                <a href="#sqlSubmenu2" data-toggle="collapse" aria-expanded="false"
+                  class="dropdown-toggle sidebar-list-items">
                   <i class="fas fa-bug"></i>
                   A3: Injection
                 </a>
                 <ul class="collapse list-unstyled" id="sqlSubmenu2">
                   <li>
-                    <button onclick="launchLab('sql_injection_lab')" class="sidebar-list-items lab-button" data-lab="sql_injection_lab"
-                      >SQL Injection
+                    <a href="/sql" class="sidebar-list-items lab-button" data-lab="sql_injection_lab">
+                      SQL Injection
                       <span class="lab-status-indicator not-running" aria-hidden="true"></span>
-                    </button>
+                    </a>
                   </li>
                   <li>
-                    <button onclick="launchLab('command_injection_lab')" class="sidebar-list-items lab-button" data-lab="command_injection_lab">
+                    <a href="/cmd" class="sidebar-list-items lab-button" data-lab="command_injection_lab">
                       Command Injection
                       <span class="lab-status-indicator not-running" aria-hidden="true"></span>
-                    </button>
+                    </a>
                   </li>
                   <li>
-                    <button onclick="launchLab('template_injection_lab')" class="sidebar-list-items lab-button" data-lab="template_injection_lab">
+                    <a href="/ssti" class="sidebar-list-items lab-button" data-lab="template_injection_lab">
                       Template Injection
                       <span class="lab-status-indicator not-running" aria-hidden="true"></span>
-                    </button>
+                    </a>
                   </li>
                 </ul>
               </li>
               <li>
-                <button onclick="launchLab('insecure_design_lab')" class="sidebar-list-items lab-button" data-lab="insecure_design_lab">
+                <a href="/insecure-design" class="sidebar-list-items lab-button" data-lab="insecure_design_lab">
                   <i class="fas fa-bug"></i>
                   A4: Insecure Design
                   <span class="lab-status-indicator not-running" aria-hidden="true"></span>
-                </button>
+                </a>
               </li>
               <li>
-                <button onclick="launchLab('sec_misconfig')" class="sidebar-list-items lab-button" data-lab="sec_misconfig">
+                <a href="/sec_mis" class="sidebar-list-items lab-button" data-lab="sec_misconfig">
                   <i class="fas fa-bug"></i>
                   A5: Security Misconfiguration
                   <span class="lab-status-indicator not-running" aria-hidden="true"></span>
-                </button>
+                </a>
               </li>
               <li>
-                <button onclick="launchLab('a9_uckv_lab')" class="sidebar-list-items lab-button" data-lab="a9_uckv_lab">
+                <a href="/a9" class="sidebar-list-items lab-button" data-lab="a9_uckv_lab">
                   <i class="fas fa-bug"></i>
                   A6: Vulnerable and Outdated Components
                   <span class="lab-status-indicator not-running" aria-hidden="true"></span>
-                </button>
+                </a>
               </li>
               <li>
-                <button onclick="launchLab('auth_failure_lab')" class="sidebar-list-items lab-button" data-lab="auth_failure_lab">
+                <a href="/auth_failure" class="sidebar-list-items lab-button" data-lab="auth_failure_lab">
                   <i class="fas fa-bug"></i>
                   A7: Identification and Authentication Failures
                   <span class="lab-status-indicator not-running" aria-hidden="true"></span>
-                </button>
+                </a>
               </li>
               <li>
-                <button onclick="launchLab('software_integrity_lab')" class="sidebar-list-items lab-button" data-lab="software_integrity_lab">
+                <a href="/2021/A8" class="sidebar-list-items lab-button" data-lab="software_integrity_lab">
                   <i class="fas fa-bug"></i>
                   A8: Software and Data Integrity Failures
                   <span class="lab-status-indicator not-running" aria-hidden="true"></span>
-                </button>
+                </a>
               </li>
               <li>
-                <button onclick="launchLab('insufficient_logging_lab')" class="sidebar-list-items lab-button" data-lab="insufficient_logging_lab">
+                <a href="/A03" class="sidebar-list-items lab-button" data-lab="insufficient_logging_lab">
                   <i class="fas fa-bug"></i>
                   A9: Security Logging and Monitoring Failures
                   <span class="lab-status-indicator not-running" aria-hidden="true"></span>
-                </button>
+                </a>
               </li>
               <li>
-                <button onclick="launchLab('ssrf_lab')" class="sidebar-list-items lab-button" data-lab="ssrf_lab">
+                <a href="/ssrf" class="sidebar-list-items lab-button" data-lab="ssrf_lab">
                   <i class="fas fa-bug"></i>
                   A10: Server-Side Request Forgery
                   <span class="lab-status-indicator not-running" aria-hidden="true"></span>
-                </button>
+                </a>
               </li>
             </ul>
 
@@ -1229,5 +1219,6 @@
         }
       }
     </script>
+    <script defer src="{% static 'js/lab-control.js' %}"></script>
   </body>
 </html>
